@@ -1,0 +1,9 @@
+[package]
+name = "smart_factory"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }      # For async support
+serde = { version = "1.0", features = ["derive"] }  # For serializing and deserializing data structures
+r2r = "0.7.0"                                       # For robotic control (replace with actual version as needed)
