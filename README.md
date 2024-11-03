@@ -17,7 +17,7 @@ This project is a **smart factory automation system** that uses **IoT**, **AI**,
 
 ## How to Use
 
-1. **Build the Project**: Use `cargo build` to install the necessary tools and compile the code.
+1. **Build the Project**: Use `cargo build` to install the necessary tools and compile the code. It is necessary have Rust installed.
 2. **Run the System**: Start the program, and it will begin collecting data from the IoT sensors and controlling the robots based on the AI analysis.
 
 ## Technologies Used
