@@ -25,4 +25,3 @@ This project is a **smart factory automation system** that uses **IoT**, **AI**,
 - **Rust**: The programming language used to build the system.
 - **Tokio**: A library for handling asynchronous tasks.
 - **Serde**: A library for processing data.
-- **R2R**: A library for robot control (you can replace this with the specific library you are using).
