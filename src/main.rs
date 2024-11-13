@@ -48,6 +48,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     })?;
 
     // Create ROS2 node
+    #[allow(dead_code)]
     let node = Node::robot_control_node(context.clone(), "robot_control_node").map_err(|e| {
         eprintln!("Failed to create ROS2 node: {}", e);
         e
@@ -140,6 +141,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 }
 
 // Stub implementations for async functions
+#[allow(dead_code)]
 fn collect_sensor_data() -> Result<String, Box<dyn Error>> {
     Ok("Sample sensor data".to_string())
 }
