@@ -1,7 +1,6 @@
 use std::error::Error;
 use std::time::Duration;
 use serde::{Serialize, Deserialize};
-use tokio::time::Sleep;
 use ros2_client::{Context, Node, Publisher};
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -49,7 +48,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     })?;
 
     // Create ROS2 node
-    let node = Node::new(context.clone(), "robot_control_node").map_err(|e| {
+    let node = Node::robot_control_node(context.clone(), "robot_control_node").map_err(|e| {
         eprintln!("Failed to create ROS2 node: {}", e);
         e
     })?;
@@ -87,10 +86,9 @@ async fn main() -> Result<(), Box<dyn Error>> {
         }
 
         // Wait for 5 seconds before the next loop iteration
-        sleep(Duration::from_secs(5)).await;
+        tokio::time::sleep(Duration::from_secs(5)).await;
     }
-}
-// Stub implementations for async functions
+}// Stub implementations for async functions
 async fn main() -> Result<(), Box<dyn Error>> {
     // Initialize ROS2 context
     let context = Context::new().map_err(|e| {
@@ -142,16 +140,16 @@ async fn main() -> Result<(), Box<dyn Error>> {
 }
 
 // Stub implementations for async functions
-async fn collect_sensor_data() -> Result<String, Box<dyn Error>> {
+fn collect_sensor_data() -> Result<String, Box<dyn Error>> {
     Ok("Sample sensor data".to_string())
 }
 
-async fn analyze_data(data: &str) -> bool {
+fn analyze_data(data: &str) -> bool {
     // Analyze data for anomalies
     data.contains("anomaly")
 }
 
-async fn control_robot(
+fn control_robot(
     publisher: &ros2_client::Publisher<std_msgs::msg::String>,
     command: &str,
 ) -> Result<(), Box<dyn Error>> {
