@@ -49,7 +49,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     })?;
 
     // Create ROS2 node
-    let node = Node::create(context.clone(), "robot_control_node").map_err(|e| {
+    let node = Node::new(context.clone(), "robot_control_node").map_err(|e| {
         eprintln!("Failed to create ROS2 node: {}", e);
         e
     })?;
