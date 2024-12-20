@@ -22,7 +22,6 @@ This project is a **smart factory automation system** that uses **IoT**, **AI**,
 
 ## Technologies Used
 
-- **Rust**: The programming language used to build the system.
 - **Tokio**: A library for handling asynchronous tasks.
 - **Serde**: A library for processing data.
 - **ROS2 Client**: Library is API that allow users to implement ROS 2 code in various programming languages.
