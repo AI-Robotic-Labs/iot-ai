@@ -924,9 +924,9 @@ checksum = "368758f23274712b504848e9d5a6f010445cc8b87a7cdb4d7cbee666c1288da3"
 
 [[package]]
 name = "ros2-client"
-version = "0.7.6"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f61210ef51dba9c55d90e2eadd5753a9c4611013827645289384c44552b03f7d"
+checksum = "f76464eca6fc4aab37ca03de853654b2c558dde54a4b3c3850cd8771f091d373"
 dependencies = [
  "async-channel",
  "bstr",
