@@ -5,6 +5,6 @@ edition = "2021"
 
 [dependencies]
 tokio = { version = "1.47.1", features = ["full"] }      # For async support
-serde = { version = "1.0.223", features = ["derive"] }  # For serializing and deserializing data structures
+serde = { version = "1.0.225", features = ["derive"] }  # For serializing and deserializing data structures
 ros2-client = "0.8.1"
 ring = "0.17.14"
